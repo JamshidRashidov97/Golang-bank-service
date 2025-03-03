@@ -85,5 +85,7 @@ func TestTranferTx(t *testing.T) {
 		// check accounts' balance
 		diff1 := account1.Balance - fromAccount.Balance
 		diff2 := toAccount.Balance - account2.Balance
+
+		//
 	}
 }
