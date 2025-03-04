@@ -89,7 +89,7 @@ func (store *Store) TranferTx(ctx context.Context, arg TranferTxParams) (Tranfer
 			return err
 		}
 
-		account1, err := q.GetAccount(ctx, arg.FromAccountID)
+		account1, err := q.GetAccountForUpdate(ctx, arg.FromAccountID)
 		if err != nil {
 			return err
 		}
@@ -102,7 +102,7 @@ func (store *Store) TranferTx(ctx context.Context, arg TranferTxParams) (Tranfer
 			return err
 		}
 
-		account2, err := q.GetAccount(ctx, arg.ToAccountID)
+		account2, err := q.GetAccountForUpdate(ctx, arg.ToAccountID)
 		if err != nil {
 			return err
 		}
